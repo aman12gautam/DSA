@@ -2,7 +2,7 @@ class Solution {
 public:
     bool checkPerfectNumber(int num) {
         int sum = 0;
-        int target = num;
+        
         for( int i = 1; i<num; i++){
             if( num%i == 0){
                 sum += i;
@@ -10,7 +10,7 @@ public:
 
             }
         }
-        if (target == sum){
+        if (num == sum){
         return true;
         }else{
             return false;
