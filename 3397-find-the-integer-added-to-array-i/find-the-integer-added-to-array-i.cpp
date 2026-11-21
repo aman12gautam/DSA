@@ -1,12 +1,10 @@
 class Solution {
 public:
     int addedInteger(vector<int>& nums1, vector<int>& nums2) {
-        int x =0;
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());
-           x+= nums2[0]-nums1[0];
-           return x;
-
+       
+       int min1 = *min_element(nums1.begin(), nums1.end());
+       int min2 = *min_element(nums2.begin(), nums2.end());
+       return min2-min1;
         
     }
 };
